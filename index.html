@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>String_regular_exp_date</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" href="style1.css" />
+<link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<script type="text/javascript">
+function string_call()
+{
+var p=prompt("Enter a String :");
+document.write("String you entered in Uppercase: "+p.toUpperCase()+"<br>");
+document.write("String you entered in Lowercase: "+p.toLowerCase()+"<br>");
+document.write("String concat: "+p.concat("xyz")+"<br>");
+}
+function Date_call()
+{
+var today=new Date();
+document.write("Today's Date : "+today.getDate()+"<br>");
+document.write("Today's Month : ");
+document.write(today.getMonth()+1+"<br>");
+document.write("Today's Year : "+today.getFullYear());
+}
+function search_call()
+{
+var r=prompt("Enter a String : ");
+var g=new RegExp('k');
+var t=new RegExp("k","i");
+var o=t.test(r);
+var a=g.exec(r);
+document.write("Search pattern is : "+o+"<br>");
+document.write("Search pattern is : "+a+"<br>");
+}
+</script>
+<h1>Javascript Date and RegEx Object</h1>
+<div style="text-align: center;" class="button_cont">
+<button class="example_e " onclick="string_call()">To Enter A String</button>
+<button class="example_e " onclick="Date_call()">To Get Date</button>
+<button class="example_e " onclick="search_call()">To Search</button>
+</div>
+</body>
+</html>
